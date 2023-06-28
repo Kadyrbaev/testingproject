@@ -24,6 +24,7 @@ const Test = ({title,price, ...props }) => {
       <Button variant="outlined" color="success">TEXT</Button>
       <Switch defaultChecked color="secondary" />
       "BRANCH"
+      <h1>TESTING LOG</h1>
     </div>
   )
 }
