@@ -1,52 +1,25 @@
-import { useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import { useEffect } from 'react';
-import Test from './components/Test';
 
-
-function App(props) {
-  // const {title, price, test, hello} = props
-
-
-  let text = "Hello"
-
-  const [state, setState] = useState(false) 
-  const [state2, setState2] = useState(false) 
-  const [sun, setSun] = useState(1)
-  console.log("APP");
-  console.log(state);
-  function changeText(){
-    setState((prev)=>!prev)
-  }
-  function changeText2(){
-    setState2(true)
-  }
-
-  useEffect(()=>{
-    console.log("Hello");
-    setSun((prev)=> {
-      console.log(prev);
-      return prev + 1
-    })
-  },[state2])
-  
+function App() {
   return (
     <div className="App">
-       <h1>{text}</h1>
-       <button onClick={changeText}>CHANGE</button>
-       <button onClick={changeText2}>COUNT</button>
-       <h1>{sun}</h1>
-       {!state && <Test/>}
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-
 }
+
 export default App;
-
-
-
-function fun(){
-  return 
-
-}
-fun()
